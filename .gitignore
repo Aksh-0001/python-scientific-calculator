@@ -1,6 +1,9 @@
+# Python Scientific Calculator - .gitignore
+# Comprehensive ignore rules for Python development
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
-*.py[codz]
+*.py[cod]
 *$py.class
 
 # C extensions
@@ -46,7 +49,7 @@ htmlcov/
 nosetests.xml
 coverage.xml
 *.cover
-*.py.cover
+*.py,cover
 .hypothesis/
 .pytest_cache/
 cover/
@@ -85,44 +88,29 @@ ipython_config.py
 # pyenv
 #   For a library or package, you might want to ignore these files since the code is
 #   intended to run in multiple environments; otherwise, check them in:
-# .python-version
+.python-version
 
 # pipenv
 #   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
 #   However, in case of collaboration, if having platform-specific dependencies or dependencies
 #   having no cross-platform support, pipenv may install dependencies that don't work, or not
 #   install all needed dependencies.
-#Pipfile.lock
-
-# UV
-#   Similar to Pipfile.lock, it is generally recommended to include uv.lock in version control.
-#   This is especially recommended for binary packages to ensure reproducibility, and is more
-#   commonly ignored for libraries.
-#uv.lock
+Pipfile.lock
 
 # poetry
 #   Similar to Pipfile.lock, it is generally recommended to include poetry.lock in version control.
 #   This is especially recommended for binary packages to ensure reproducibility, and is more
 #   commonly ignored for libraries.
 #   https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control
-#poetry.lock
-#poetry.toml
+poetry.lock
 
 # pdm
 #   Similar to Pipfile.lock, it is generally recommended to include pdm.lock in version control.
-#   pdm recommends including project-wide configuration in pdm.toml, but excluding .pdm-python.
-#   https://pdm-project.org/en/latest/usage/project/#working-with-version-control
-#pdm.lock
-#pdm.toml
-.pdm-python
-.pdm-build/
-
-# pixi
-#   Similar to Pipfile.lock, it is generally recommended to include pixi.lock in version control.
-#pixi.lock
-#   Pixi creates a virtual environment in the .pixi directory, just like venv module creates one
-#   in the .venv directory. It is recommended not to include this directory in version control.
-.pixi
+pdm.lock
+#   pdm stores project-wide configurations in .pdm.toml, but it is recommended to not include it
+#   in version control.
+#   https://pdm.fming.dev/#use-with-ide
+.pdm.toml
 
 # PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
 __pypackages__/
@@ -136,7 +124,6 @@ celerybeat.pid
 
 # Environments
 .env
-.envrc
 .venv
 env/
 venv/
@@ -151,7 +138,7 @@ venv.bak/
 # Rope project settings
 .ropeproject
 
-# mkdocs documentation
+# mkdocs documentation  
 /site
 
 # mypy
@@ -170,38 +157,185 @@ cython_debug/
 
 # PyCharm
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
-#  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
-#  and can be added to the global gitignore or merged into this file.  For a more nuclear
-#  option (not recommended) you can uncomment the following to ignore the entire idea folder.
-#.idea/
-
-# Abstra
-# Abstra is an AI-powered process automation framework.
-# Ignore directories containing user credentials, local state, and settings.
-# Learn more at https://abstra.io/docs
-.abstra/
+#  be added to the global gitignore or merged into this project gitignore.  For a PyCharm
+#  project, it is not recommended to check the .idea/ directory into version control.
+.idea/
 
 # Visual Studio Code
-#  Visual Studio Code specific template is maintained in a separate VisualStudioCode.gitignore 
-#  that can be found at https://github.com/github/gitignore/blob/main/Global/VisualStudioCode.gitignore
-#  and can be added to the global gitignore or merged into this file. However, if you prefer, 
-#  you could uncomment the following to ignore the entire vscode folder
-# .vscode/
+.vscode/
+*.code-workspace
 
-# Ruff stuff:
-.ruff_cache/
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
 
-# PyPI configuration file
-.pypirc
+# Vim
+*.swp
+*.swo
+*~
 
-# Cursor
-#  Cursor is an AI-powered code editor. `.cursorignore` specifies files/directories to
-#  exclude from AI features like autocomplete and code analysis. Recommended for sensitive data
-#  refer to https://docs.cursor.com/context/ignore-files
-.cursorignore
-.cursorindexingignore
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
 
-# Marimo
-marimo/_static/
-marimo/_lsp/
-__marimo__/
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Windows shortcuts
+*.lnk
+
+# Calculator specific files
+calculator_history.txt
+calculator_config.ini
+*.calc
+*.calculator
+
+# Temporary calculation files
+temp_calculations/
+*.tmp
+*.temp
+
+# User data
+user_variables.json
+saved_expressions.txt
+
+# Logs
+logs/
+*.log
+
+# Screenshots and demos
+screenshots/
+demos/
+recordings/
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Virtual environment names (common names)
+calc-env/
+calculator-env/
+scientific-calc/
+
+# Build artifacts
+calculator.exe
+calculator_gui.exe
+calculator_cli.exe
+
+# Packaging
+*.deb
+*.rpm
+*.msi
+*.dmg
+*.app
+
+# Documentation builds
+docs/build/
+docs/_build/
+*.pdf
+*.epub
+
+# Example outputs
+example_outputs/
+sample_calculations/
+
+# Performance profiling
+*.prof
+*.profile
+
+# Security
+*.pem
+*.key
+secrets.py
+config_private.py
+
+# Database files (if any future features use databases)
+*.db
+*.sqlite
+*.sqlite3
+
+# Cache directories
+cache/
+.cache/
+tmp/
+temp/
+
+# IDE specific
+.vscode/settings.json
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries/
+.idea/shelf/
+
+# Local configuration
+local_config.py
+development_config.py
+
+# Compiled translations
+*.mo
+
+# Generated documentation
+api_docs/
+sphinx_docs/
+
+# Test outputs
+test_results/
+test_reports/
+junit.xml
+
+# Continuous Integration
+.github/workflows/secrets
+.travis.yml.bak
+.circleci/config.yml.bak
+
+# Package management
+Pipfile
+requirements-dev.txt
+requirements-test.txt
+
+# Local development
+.local/
+bin/
+include/
+pyvenv.cfg
+
+# Conda
+.conda/
+
+# Node.js (if any web features added later)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# pyenv
+.python-version
+
+# Internationalization
+locale/
+*.po
+
+# Custom ignores for this project
+calculator_*.bat
+calculator_*.sh
+setup_temp/
+install_temp/
+
+# End of .gitignore
