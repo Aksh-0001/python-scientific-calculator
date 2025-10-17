@@ -1,0 +1,41 @@
+# Python Scientific Calculator Requirements
+# Install with: pip install -r requirements.txt
+
+# Core requirements (built-in with Python 3.6+)
+# No external dependencies required for basic functionality
+
+# Optional dependencies for enhanced features
+numpy>=1.21.0                # For advanced numerical computations
+scipy>=1.7.0                 # For scientific computing functions
+matplotlib>=3.4.0            # For plotting and graphing (future feature)
+sympy>=1.8                   # For symbolic mathematics (future feature)
+
+# Development dependencies
+pytest>=6.2.0               # For unit testing
+pytest-cov>=2.12.0          # For test coverage
+black>=21.6.0                # For code formatting
+flake8>=3.9.0                # For code linting
+mypy>=0.910                  # For type checking
+
+# Documentation dependencies
+sphinx>=4.0.0                # For documentation generation
+sphinx-rtd-theme>=0.5.0      # For documentation theme
+
+# Package building
+setuptools>=57.0.0           # For package building
+wheel>=0.36.0                # For wheel distribution
+twine>=3.4.0                 # For PyPI uploads
+
+# GUI enhancement (optional)
+pillow>=8.3.0                # For image processing in GUI
+tkinter-tooltip>=2.0.0       # For enhanced tooltips (if available)
+
+# Additional mathematical libraries (optional)
+decimal                      # High precision decimal arithmetic (built-in)
+fractions                    # Rational number arithmetic (built-in)
+statistics                   # Statistical functions (built-in Python 3.4+)
+random                       # Random number generation (built-in)
+cmath                        # Complex number math (built-in)
+
+# Note: Most functionality uses only Python standard library
+# External packages are optional for advanced features
